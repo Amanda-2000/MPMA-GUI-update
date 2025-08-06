@@ -471,6 +471,8 @@ function queryPromise(sql, values = []) {
   });
 }
 
+///
+
 // Add promisified query method to the db object
 db.queryPromise = queryPromise;
 

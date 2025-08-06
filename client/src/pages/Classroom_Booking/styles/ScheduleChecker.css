@@ -1,0 +1,172 @@
+.details-container-s {
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 5px solid rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.schedule-filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  justify-content: space-between;
+}
+
+.schedule-filter label {
+  font-weight: bold;
+  color: #000000;
+  font-size: 0.8rem;
+}
+
+.schedule-headings {
+  margin: 0 auto;
+  margin-top: 30px;
+  border-bottom: 2px solid #024d769d;
+  padding-bottom: 8px;
+  width: 50%;
+
+  text-align: center;
+  font-size: 1.2rem;
+
+  background: linear-gradient(to left, black,blue,indigo,Purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.schedule-filter button {
+   background-color: #024d769d;
+  border: none;
+  color: #e3eaf5;
+  padding: 6px 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 3px solid white;
+  font-size: 0.8rem;
+}
+
+.schedule-filter button:hover {
+  background-color: #0d2388;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.35);
+}
+
+.schedule-filter button:focus,
+.schedule-filter button:active {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.35);
+  outline: none;
+}
+
+.schedule-container {
+  overflow: auto;
+}
+
+.schedule-table,
+.free-rooms-table {
+  width: 50%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  margin: 0 auto;
+  margin-top: 1rem;
+  font-weight: bolder;
+}
+
+.schedule-table th,
+.free-rooms-table th,
+.schedule-table td,
+.free-rooms-table td {
+  width: 50%;
+  box-sizing: border-box;
+  font-size: 0.7rem;
+  padding: 1rem;
+  border: 3px solid #6d6f6f44;
+  text-align: left;
+  color: #000000;
+  text-align: center;
+  background-color: rgb(255, 255, 255); /* frosted background */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* for Safari support */
+}
+
+.schedule-table th,
+.free-rooms-table th {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  font-weight: bold;
+  background-color: #4a6cfa;
+}
+
+.schedule-table tbody tr:nth-child(even):hover,
+.schedule-table tbody tr:nth-child(odd):hover,
+.free-rooms-table tbody tr:nth-child(even):hover,
+.free-rooms-table tbody tr:nth-child(odd):hover {
+  background-color: rgba(2, 145, 255, 0.662);
+}
+
+.schedule-table tbody tr:nth-child(even),
+.free-rooms-table tbody tr:nth-child(even) {
+  background-color: rgba(248, 246, 246, 0.2);
+}
+
+.schedule-table tbody tr:nth-child(odd),
+.free-rooms-table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .filter-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content-wrapper {
+    margin: 20px;
+    padding: 1.5rem;
+  }
+}
+
+.schedule-filter input[type="date"] {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 34, 57, 0.5);
+  color: #fcfcfc;
+  border: 3px solid #00a6ff9d;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 500;
+  cursor: pointer;
+  width: 200px;
+  font-size: 0.7rem;
+}
+
+.schedule-filter input[type="date"]:focus {
+  border-color: #02f7f7aa;
+  box-shadow: 0 0 4px rgba(2, 247, 247, 0.3);
+}
+
+.schedule-filter input[type="date"]::placeholder {
+  color: #fcfcfcaa;
+}
+
+.schedule-filter input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* makes the calendar icon white */
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.schedule-filter input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
